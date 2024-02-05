@@ -9,18 +9,6 @@
     "lint": "next lint",
     "prepare": "husky"
   },
-  "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "tsc --incremental false --noEmit",
-      "eslint --fix",
-      "prettier --write"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npx lint-staged"
-    }
-  },
   "dependencies": {
     "@mui/icons-material": "^5.15.7",
     "@mui/material": "^5.15.7",
