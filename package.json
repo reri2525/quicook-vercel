@@ -10,7 +10,11 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": "eslint --fix"
+    "*.{js,ts,tsx}": [
+      "tsc --incremental false --noEmit",
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@mui/icons-material": "^5.15.7",
