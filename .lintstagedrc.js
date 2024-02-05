@@ -1,6 +1,8 @@
 const path = require('path');
 
-const buildEslintCommand = (filenames) =>
+const buildEslintCommand = (
+  filenames //ステージング領域のファイルがfilenameに代入される。
+) =>
   `next lint --fix --file ${filenames
     .map((f) => path.relative(process.cwd(), f))
     .join(' --file ')}`;
