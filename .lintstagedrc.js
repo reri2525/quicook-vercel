@@ -1,7 +1,7 @@
 const path = require('path');
 
 const buildEslintCommand = (
-  filenames //ステージング領域のファイルがfilenameに代入される。
+  filenames //ステージング領域のファイルがfilenameに代入される。(git add)
 ) =>
   `next lint --fix --file ${filenames
     .map((f) => path.relative(process.cwd(), f))
