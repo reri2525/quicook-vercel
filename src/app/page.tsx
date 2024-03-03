@@ -1,9 +1,14 @@
 import React from 'react';
+import Header from '@/components/common/header/Header';
+import SideBar from '@/components/common/sidebar/SideBar';
+import RootLayout from './layout';
+import '@/styles/globals.css';
 
 export default function Home() {
   return (
-    <div>
-      <h1>Hello, World!</h1>
-    </div>
+    <RootLayout>
+      <Header />
+      <SideBar />
+    </RootLayout>
   );
 }

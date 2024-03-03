@@ -11,7 +11,7 @@ module.exports = {
       files: ['*.ts', '*.tsx'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
-        project: './next/app/tsconfig.json',
+        project: './tsconfig.json',
       },
     },
   ],
@@ -19,5 +19,10 @@ module.exports = {
     babelOptions: {
       presets: [require.resolve('next/babel')], //next/babelはここでextendsに書くとlint-stagedが通らない。
     },
+  },
+  rules: {
+    'import/prefer-default-export': 'off',
+    'arrow-body-style': 'off',
+    'import/extensions': 'off',
   },
 };
